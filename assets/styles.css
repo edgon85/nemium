@@ -22,6 +22,38 @@ body {
   block-size: 96px;
 }
 
+.header__wrapper-content header {
+  inline-size: 90%;
+  top: 64px;
+  left: 116px;
+  padding-inline-start: 16px;
+  padding-block-start: 16px;
+}
+
+.header__wrapper-content header nav p {
+  font-weight: 400;
+  color: #616161;
+  line-height: 24px;
+  margin-block-end: 16px;
+}
+
+.header__wrapper-content summary {
+  color: #616161;
+  font-weight: 700;
+  line-height: 24px;
+  padding-block-end: 16px;
+}
+
+.header__wrapper-content li {
+  list-style: none;
+}
+.header__wrapper-content a {
+  display: inline-block;
+  padding-block-end: 16px;
+  color: #616161;
+  text-decoration: none;
+}
+
 .main .main__wrapper {
   max-inline-size: 902px;
   margin: auto;
@@ -62,8 +94,8 @@ body {
 }
 
 .section__content-item .img-logo {
-  width: 80px;
-  height: 80px;
+  inline-size: 80px;
+  block-size: 80px;
   vertical-align: top;
 }
 
@@ -78,10 +110,10 @@ body {
   background-color: #424242;
   content: '';
   display: block;
-  height: 4px;
+  block-size: 4px;
   margin-block-end: 16px;
   margin-block-start: 4px;
-  width: 50px;
+  inline-size: 50px;
 }
 
 .section__content-item p {
@@ -182,8 +214,8 @@ body {
 }
 .section__content-caja .item .slider .slide-container .slider-slide .video {
   display: inline-block;
-  width: 100%;
-  height: auto;
+  inline-size: 100%;
+  block-size: auto;
   aspect-ratio: 16/9;
 }
 
@@ -216,7 +248,6 @@ body {
   margin-block-end: 16px;
 }
 
-
 .newsletter .itme {
   block-size: 48px;
   border-radius: 90px;
@@ -228,12 +259,12 @@ body {
 .newsletter .itme input {
   block-size: 90%;
   border: none;
-  height: 33px;
+  block-size: 33px;
   margin-inline-start: 15px;
   outline: none;
   position: absolute;
   top: 5px;
-  width: 90%;
+  inline-size: 90%;
 }
 .newsletter .itme input[type='submit'] {
   background-color: black;
@@ -246,8 +277,8 @@ body {
 }
 
 .footer {
-  height: 174px;
-  width: 100vw;
+  block-size: 174px;
+  inline-size: 100vw;
   background-color: #212429;
   text-align: center;
   padding-block-start: 48px;
@@ -261,12 +292,17 @@ body {
 }
 
 @media screen and (min-width: 700px) {
-  /*  body {
-    background-color: red;
-  }
- */
   .hero {
     block-size: 350px;
+  }
+
+  .header__wrapper-content {
+    position: relative;
+  }
+
+  .header__wrapper-content header {
+    position: absolute;
+    inline-size: 220px;
   }
 
   .main .main__wrapper {
@@ -277,8 +313,7 @@ body {
     font-size: 60px;
   }
 
-  .newsletter .itme input[type='submit']{
-      cursor: pointer;
+  .newsletter .itme input[type='submit'] {
+    cursor: pointer;
   }
-
 }
